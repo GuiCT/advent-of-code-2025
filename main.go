@@ -10,20 +10,22 @@ import (
 func main() {
 	var day int
 	var part int
-	var use_example bool
+	var useExample bool
 
-	flag.BoolVar(&use_example, "example", false, "Specify if using example or not")
+	flag.BoolVar(&useExample, "example", false, "Specify if using example or not")
 	flag.IntVar(&day, "day", 0, "Specify the day of the challenge to run")
 	flag.IntVar(&part, "part", 0, "Specify the part of the challenge to run")
 	flag.Parse()
 	timeStart := time.Now()
 	switch day {
 	case 1:
-		challenges.Day1(use_example)
+		challenges.Day1(useExample)
 	case 2:
-		challenges.Day2(use_example, part)
+		challenges.Day2(useExample, part)
 	case 3:
-		challenges.Day3(use_example, part)
+		challenges.Day3(useExample, part)
+	case 4:
+		challenges.Day4(useExample, part)
 	}
 	fmt.Printf("Time elapsed: %.2fms", float64(time.Since(timeStart).Microseconds())/1000)
 }
