@@ -28,6 +28,8 @@ func main() {
 		challenges.Day4(useExample, part)
 	case 5:
 		challenges.Day5(useExample, part)
+	case 6:
+		challenges.Day6(useExample, part)
 	}
 	fmt.Printf("Time elapsed: %.2fms", float64(time.Since(timeStart).Microseconds())/1000)
 }
