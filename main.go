@@ -17,9 +17,6 @@ func main() {
 	flag.IntVar(&part, "part", 0, "Specify the part of the challenge to run")
 	flag.Parse()
 	timeStart := time.Now()
-	day = 7
-	useExample = false
-	part = 2
 	switch day {
 	case 1:
 		challenges.Day1(useExample)
@@ -35,6 +32,14 @@ func main() {
 		challenges.Day6(useExample, part)
 	case 7:
 		challenges.Day7(useExample, part)
+	case 8:
+		challenges.Day8(useExample, part)
+	case 9:
+		challenges.Day9(useExample, part)
+	case 10:
+		challenges.Day10(useExample, part)
+	case 11:
+		challenges.Day11(useExample, part)
 	}
 	fmt.Printf("Time elapsed: %.2fms", float64(time.Since(timeStart).Microseconds())/1000)
 }
