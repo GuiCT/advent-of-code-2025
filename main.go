@@ -37,9 +37,11 @@ func main() {
 	case 9:
 		challenges.Day9(useExample, part)
 	case 10:
-		challenges.Day10(useExample, part)
+		challenges.Day10(useExample)
 	case 11:
 		challenges.Day11(useExample, part)
+	case 12:
+		challenges.Day12(useExample, part)
 	}
 	fmt.Printf("Time elapsed: %.2fms", float64(time.Since(timeStart).Microseconds())/1000)
 }
